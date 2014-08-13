@@ -2,10 +2,12 @@ include(YCMEPHelper)
 include(FindOrBuildPackage)
 
 find_or_build_package(TinyXML QUIET)
-find_or_build_package(urdfom 
+find_or_build_package(urdfdom QUIET)
 
 include(YCMEPHelper)
 
 ycm_ep_helper(SDFormat TYPE HG
                        STYLE BITBUCKET
-                       REPOSITORY osrf/sdformat)
+                       REPOSITORY osrf/sdformat
+                       DEPENDS TinyXML
+                               urdfdom)
