@@ -22,4 +22,4 @@ include(YCMEPHelper)
 
 ycm_ep_helper(TinyXML TYPE GIT
                       STYLE GITHUB
-                      REPOSITORY robotology-dependenc/tinyxml.git)
+                      REPOSITORY robotology-dependencies/tinyxml.git)
