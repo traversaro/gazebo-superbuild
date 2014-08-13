@@ -1,0 +1,35 @@
+os:
+  - linux
+  - osx
+
+language: c++
+
+env:
+  - TRAVIS_BUILD_TYPE=Debug TRAVIS_CMAKE_GENERATOR="Unix Makefiles"
+  - TRAVIS_BUILD_TYPE=Release TRAVIS_CMAKE_GENERATOR="Unix Makefiles"
+  - TRAVIS_BUILD_TYPE=Debug TRAVIS_CMAKE_GENERATOR="Xcode"
+  - TRAVIS_BUILD_TYPE=Release TRAVIS_CMAKE_GENERATOR="Xcode"
+
+matrix:
+  exclude:
+    - os: linux
+      env: TRAVIS_BUILD_TYPE=Release TRAVIS_CMAKE_GENERATOR="Xcode"
+    - os: linux
+      env: TRAVIS_BUILD_TYPE=Debug TRAVIS_CMAKE_GENERATOR="Xcode"
+
+branches:
+  except:
+  - gh-pages
+  - appveyor
+
+install:
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository -y ppa:robotology/ppa; sudo apt-get update; sudo apt-get install cmake; fi
+  - cmake --version
+
+before_script:
+  - mkdir build
+  - cd build
+  - cmake .. -G"${TRAVIS_CMAKE_GENERATOR}" -DNON_INTERACTIVE_BUILD:BOOL=TRUE -DCMAKE_BUILD_TYPE=${TRAVIS_BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=$(pwd)/../install
+
+script:
+  - cmake --build . --config ${TRAVIS_BUILD_TYPE}
