@@ -9,5 +9,7 @@ include(YCMEPHelper)
 ycm_ep_helper(SDFormat TYPE HG
                        STYLE BITBUCKET
                        REPOSITORY osrf/sdformat
+					   TAG default
                        DEPENDS TinyXML
-                               urdfdom)
+                               urdfdom
+					   COMPONENT osrf)
