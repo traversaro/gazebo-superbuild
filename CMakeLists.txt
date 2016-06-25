@@ -8,11 +8,6 @@ enable_language(C)
 # makes available local cmake modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-set(GAZEBO-SUPERBUILD_MAJOR_VERSION 0)
-set(GAZEBO-SUPERBUILD_MINOR_VERSION 1)
-set(GAZEBO-SUPERBUILD_PATCH_VERSION 0)
-set(GAZEBO-SUPERBUILD_VERSION ${GAZEBO-SUPERBUILD_MAJOR_VERSION}.${GAZEBO-SUPERBUILD_MINOR_VERSION}.${GAZEBO-SUPERBUILD_PATCH_VERSION})
-
 include(CTest)
 include(FeatureSummary)
 
@@ -26,6 +21,6 @@ include(FindOrBuildPackage)
 include(YCMEPHelper)
 
 # For now just download SDFormat and its dependencies
-find_or_build_package(SDFormat)
+find_or_build_package(gazebo)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
