@@ -20,7 +20,6 @@ include(YCMBootstrap)
 include(FindOrBuildPackage)
 include(YCMEPHelper)
 
-# For now just download SDFormat and its dependencies
 find_or_build_package(gazebo)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
