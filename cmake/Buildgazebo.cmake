@@ -4,6 +4,7 @@ include(FindOrBuildPackage)
 include(YCMEPHelper)
 
 find_or_build_package(ignition-math2 QUIET)
+find_or_build_package(ignition-msg0 QUIET)
 find_or_build_package(ignition-transport1 QUIET)
 find_or_build_package(SDFormat QUIET)
 
@@ -12,6 +13,7 @@ ycm_ep_helper(gazebo TYPE HG
                      REPOSITORY osrf/gazebo
                      TAG default
                      DEPENDS ignition-math2
+                             ignition-msg0
                              ignition-transport1
                              SDFormat
                      COMPONENT osrf)
