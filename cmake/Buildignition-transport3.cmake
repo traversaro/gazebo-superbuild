@@ -12,4 +12,5 @@ ycm_ep_helper(ignition-transport3 TYPE HG
                                   TAG default
                                   DEPENDS ignition-tools
                                           ignition-msgs0
-                                  COMPONENT osrf)
+                                  COMPONENT osrf
+                                  CMAKE_CACHE_ARGS -DBUILD_TESTING:BOOL=OFF)
