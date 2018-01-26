@@ -6,10 +6,10 @@ include(YCMEPHelper)
 find_or_build_package(ignition-tools QUIET)
 find_or_build_package(ignition-msgs1 QUIET)
 
-ycm_ep_helper(ignition-transport3 TYPE HG
+ycm_ep_helper(ignition-transport4 TYPE HG
                                   STYLE BITBUCKET
                                   REPOSITORY ignitionrobotics/ign-transport
-                                  TAG ign-transport3
+                                  TAG ign-transport4
                                   DEPENDS ignition-tools
                                           ignition-msgs1
                                   COMPONENT osrf
