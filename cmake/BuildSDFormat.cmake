@@ -3,11 +3,11 @@ include(FindOrBuildPackage)
 
 include(YCMEPHelper)
 
-find_or_build_package(ignition-math43 QUIET)
+find_or_build_package(ignition-math4 QUIET)
 
 ycm_ep_helper(SDFormat TYPE HG
                        STYLE BITBUCKET
                        REPOSITORY osrf/sdformat
-                       TAG default
+                       TAG sdf6
                        DEPENDS ignition-math4
                        COMPONENT osrf)
