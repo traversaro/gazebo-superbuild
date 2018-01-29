@@ -1,8 +1,6 @@
 include(YCMEPHelper)
 include(FindOrBuildPackage)
 
-include(YCMEPHelper)
-
 find_or_build_package(ignition-math4 QUIET)
 
 ycm_ep_helper(SDFormat TYPE HG
