@@ -16,6 +16,22 @@ automatically using only CMake.
 
 #### Linux/macOS
 
+##### Uninstall binary packages
+
+If you want to compile Gazebo, SDFormat and all the ignition libraries from sources, remember to uninstall all the relevant 
+packages from apt or homebrew before starting to use the `gazebo-superbuild` . Otherwise, the [YCM](http://robotology.github.io/ycm)'s [find_or_build_package](http://robotology.github.io/ycm/gh-pages/git-master/module/FindOrBuildPackage.html#find_or_build_package) command will find the binary version of Gazebo and its dependencies and will not build anything from source. Alternative, you can manually set the [`USE_SYSTEM_<package>`](http://robotology.github.io/ycm/gh-pages/git-master/manual/ycm-superbuild.7.html?highlight=use_system_#ycm-superbuild-manual-for-developers) CMake variables for all the packages that you want to build from source instead of using from binaries.
+
+To uninstall the binary packages in Debian/Ubuntu, run the following command: 
+~~~
+sudo apt-get remove '.*gazebo.*' '.*sdformat.*' '.*ignition-.*'
+~~~
+
+
+To uninstall the binary packages in macOS Homebrew, `brew uninstall` all formulas that start with `gazebo`, `sdformat` or `ignition` .
+
+~~~
+
+##### Compilation 
 Follow the instructions available at http://gazebosim.org/tutorials?tut=install_from_source&cat=install 
 to download the non-OSRF dependencies of Gazebo, then avoid to manually download any repository from bitbucket, 
 but just compile this project as any other CMake-based project: 
