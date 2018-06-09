@@ -29,8 +29,6 @@ sudo apt-get remove '.*gazebo.*' '.*sdformat.*' '.*ignition-.*'
 
 To uninstall the binary packages in macOS Homebrew, `brew uninstall` all formulas that start with `gazebo`, `sdformat` or `ignition` .
 
-~~~
-
 ##### Compilation 
 Follow the instructions available at http://gazebosim.org/tutorials?tut=install_from_source&cat=install 
 to download the non-OSRF dependencies of Gazebo, then avoid to manually download any repository from bitbucket, 
