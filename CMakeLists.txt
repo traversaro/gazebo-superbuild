@@ -3,7 +3,7 @@ project(gazebo-superbuild NONE)
 
 ## we have to enable C because it is currently used
 ## by CMake to describe packages (in Config*.cmake files)
-enable_language(C)
+enable_language(C CXX)
 
 # makes available local cmake modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
