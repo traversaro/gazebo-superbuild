@@ -20,7 +20,8 @@ include(YCMBootstrap)
 include(FindOrBuildPackage)
 include(YCMEPHelper)
 
-option(BUILD_IGN_GAZEBO "Build the experimental version of Gazebo 11 (ign-gazebo) instead of the stock Gazebo 9." OFF)
+option(ENABLE_GAZEBO "Build Gazebo 9." OFF)
+option(ENABLE_IGN_GAZEBO "Build the experimental version of Gazebo 11 (ign-gazebo)." OFF)
 
 if(BUILD_IGN_GAZEBO)
   find_or_build_package(ignition-gazebo)
