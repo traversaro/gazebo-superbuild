@@ -20,6 +20,15 @@ include(YCMBootstrap)
 include(FindOrBuildPackage)
 include(YCMEPHelper)
 
-find_or_build_package(gazebo)
+option(ENABLE_GAZEBO "Build Gazebo 9." ON)
+option(ENABLE_IGN_GAZEBO "Build the experimental version of Gazebo 11 (ign-gazebo)." OFF)
+
+if(ENABLE_GAZEBO)
+  find_or_build_package(gazebo)
+endif()
+
+if(ENABLE_IGN_GAZEBO)
+  find_or_build_package(ignition-gazebo)
+endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
