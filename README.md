@@ -14,6 +14,10 @@ automatically using only CMake.
 
 ### How to use 
 
+#### CMake options
+* `ENABLE_GAZEBO` (Default: ON) : if this option is enabled, the superbuild downloads and compiles the latest version of Gazebo 9, and all the necessary dependencies.
+* `ENABLE_IGN_GAZEBO` (Default: OFF) : if this option is enabled, the superbuild downloads and compiles the latest development of Gazebo 11 (also known as "Ignition Gazebo") and all the necessary dependencies.
+
 #### Linux/macOS
 
 ##### Uninstall binary packages
