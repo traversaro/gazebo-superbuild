@@ -28,7 +28,7 @@ if(ENABLE_GAZEBO)
 endif()
 
 if(ENABLE_IGN_GAZEBO)
-  find_or_build_package(ignition-gazebo)
+  find_or_build_package(ignition-gazebo1)
 endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -11,7 +11,7 @@ find_or_build_package(sdformat8 QUIET)
 ycm_ep_helper(ignition-physics1 TYPE HG
                                 STYLE BITBUCKET
                                 REPOSITORY ignitionrobotics/ign-physics
-                                TAG default
+                                TAG ign-physics1
                                 DEPENDS ignition-cmake2
                                         ignition-common3
                                         ignition-math6

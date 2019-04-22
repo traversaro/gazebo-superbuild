@@ -9,7 +9,7 @@ find_or_build_package(ignition-msgs3 QUIET)
 ycm_ep_helper(ignition-transport6 TYPE HG
                                   STYLE BITBUCKET
                                   REPOSITORY ignitionrobotics/ign-transport
-                                  TAG gz11
+                                  TAG ign-transport6
                                   DEPENDS ignition-tools
                                           ignition-msgs3
                                   COMPONENT osrf
