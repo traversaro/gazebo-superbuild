@@ -8,4 +8,5 @@ ycm_ep_helper(SDFormat TYPE HG
                        REPOSITORY osrf/sdformat
                        TAG sdf6
                        DEPENDS ignition-math4
-                       COMPONENT osrf)
+                       COMPONENT osrf
+					   CMAKE_ARGS -DBUILD_TESTING:BOOL=${BUILD_TESTING})

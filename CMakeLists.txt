@@ -11,6 +11,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(CTest)
 include(FeatureSummary)
 
+# Build tests? This option is propagated to all the subprojects
+option(BUILD_TESTING "Set the BUILD_TESTING option for all the subprojects" OFF)
+
 # Enables unmerged patches to CMake modules, this is required for the superbuild to work
 set(YCM_USE_CMAKE_PROPOSED TRUE CACHE BOOL "Use files including unmerged cmake patches")
 
@@ -19,6 +22,8 @@ include(YCMBootstrap)
 
 include(FindOrBuildPackage)
 include(YCMEPHelper)
+
+
 
 find_or_build_package(gazebo)
 

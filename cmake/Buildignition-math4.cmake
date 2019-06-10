@@ -8,4 +8,5 @@ ycm_ep_helper(ignition-math4 TYPE HG
                              REPOSITORY ignitionrobotics/ign-math
                              TAG ign-math4
                              DEPENDS ignition-cmake0
-                             COMPONENT osrf)
+                             COMPONENT osrf
+							 CMAKE_ARGS -DBUILD_TESTING:BOOL=${BUILD_TESTING})

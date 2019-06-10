@@ -14,4 +14,5 @@ ycm_ep_helper(gazebo TYPE HG
                              ignition-msg1
                              ignition-transport4
                              SDFormat
-                     COMPONENT osrf)
+                     COMPONENT osrf
+					 CMAKE_ARGS -DBUILD_TESTING:BOOL=${BUILD_TESTING})

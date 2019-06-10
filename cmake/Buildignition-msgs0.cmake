@@ -10,4 +10,5 @@ ycm_ep_helper(ignition-msgs0 TYPE HG
                              TAG ign-msgs0
                              DEPENDS ignition-cmake0
                                      ignition-math4
-                             COMPONENT osrf)
+                             COMPONENT osrf
+							 CMAKE_ARGS -DBUILD_TESTING:BOOL=${BUILD_TESTING})
